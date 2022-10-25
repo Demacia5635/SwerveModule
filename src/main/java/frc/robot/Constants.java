@@ -14,9 +14,9 @@ package frc.robot;
  */
 public final class Constants {
     public static final class Swerve {
-        public static final int FRONT_LEFT_ANGLE_MOTOR = -1;
-        public static final int FRONT_LEFT_SPEED_MOTOR = -1;
-        public static final int FRONT_LEFT_ANGLE_ENCODER = -1;
+        public static final int FRONT_LEFT_ANGLE_MOTOR = 1;
+        public static final int FRONT_LEFT_SPEED_MOTOR = 2;
+        public static final int FRONT_LEFT_ANGLE_ENCODER = 11;
 
         public static final int FRONT_RIGHT_ANGLE_MOTOR = -1;
         public static final int FRONT_RIGHT_SPEED_MOTOR = -1;

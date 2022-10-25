@@ -83,10 +83,14 @@ public class SwerveModule implements Sendable {
     return angleEncoder.getAbsolutePosition();
   }
 
+  public double getVelocity() {
+    return speedMotor.getSelectedSensorVelocity() * Swerve.TICKS_PER_MS_TO_MPS;
+  }
+
   @Override
   public void initSendable(SendableBuilder builder) {
     builder.addDoubleProperty("Angle", this::getAngle, null);
-    builder.addDoubleProperty("Speed", () -> speedMotor.getSelectedSensorVelocity() * Swerve.TICKS_PER_MS_TO_MPS, null);
+    builder.addDoubleProperty("Speed", this::getVelocity, null);
     builder.addBooleanProperty("Reversed", () -> reversed, null);
   }
 }
