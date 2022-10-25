@@ -5,7 +5,7 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.GenericHID;
-import edu.wpi.first.wpilibj.XboxController;
+import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj2.command.Command;
 import frc.robot.subsystems.OneModule;
 
@@ -18,7 +18,7 @@ import frc.robot.subsystems.OneModule;
 public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   private static RobotContainer instance;
-  public static final XboxController controller = new XboxController(0);
+  public static final Joystick controller = new Joystick(0);
   private final OneModule module;
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
